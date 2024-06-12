@@ -1,7 +1,14 @@
+using ecommerce.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString= builder.Configuration.GetConnectionString("dbConnection");
+
+builder.Services.AddDbContext<AppDBcontext>(options => options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

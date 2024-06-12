@@ -21,8 +21,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="~/newfolder/css/bootstrap.min.css">
+   
     <!-- style css -->
    
     
@@ -51,30 +51,39 @@
 
 
 
+<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <div class="header_section">
         <div class="container-fluid">
-            <nav class="navbar navbar-light bg-light justify-content-between">
+            <nav class="navbar">
                 <div id="mySidenav" class="sidenav">
-                    
-                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                   <ul>
-                       <li ><a href="index.html">Home</a></li>
-                      <li><a href="products.html">Products</a></li>
-                       <li>@Html.ActionLink("About","Home","About")</li>
-                        <a href="client.html">Client</a>
-                        <a href="contact.html">Contact</a>
-                   </ul>
-                    
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                        
+                         
+                        <li><a asp-controller="Home" asp-action="Index">Home</a>></li>
+                        <li><a asp-controller="Home" asp-action="Products">Products</a>></li>
+                        <li><a asp-controller="Home" asp-action="About">About</a>></li>
+                        <li><a asp-controller="Home" asp-action="Client">Client</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    </ul>
                 </div>
-                <span class="toggle_icon" onclick="openNav()"><img src="~/newfolder/images/toggle-icon.png"></span>
-                <a class="logo" href="index.html"><img src="~/newfolder/images/logo.png"></a></a>
-                <form class="form-inline ">
+                <span class="toggle_icon" onclick="openNav()"><img src="~/NewFolder/images/toggle-icon.png" alt="Toggle Icon"></span>
+                <a class="logo" href="index.html"><img src="~/NewFolder/images/logo.png" alt="Logo"></a>
+                <form class="form-inline">
                     <div class="login_text">
                         <ul>
-                            <li><a href="#"><img src="~/newfolder/images/user-icon.png" /></a></li>
-                            <li><a href="#"><img src="~/newfolder/images/bag-icon.png"></a></li>
-                            <li><a href="#"><img src="~/newfolder/images/search-icon.png"></a></li>
+                            <li><a href="#"><img src="~/NewFolder/images/user-icon.png" alt="User Icon"></a></li>
+                            <li><a href="#"><img src="~/NewFolder/images/bag-icon.png" alt="Bag Icon"></a></li>
+                            <li><a href="#"><img src="~/NewFolder/images/search-icon.png" alt="Search Icon"></a></li>
                         </ul>
                     </div>
                 </form>
@@ -82,389 +91,21 @@
         </div>
     </div>
 
-    <!-- banner section start -->
-    <div class="banner_section layout_padding">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h1 class="banner_taital">Beauty <br>Kit</h1>
-                                <p class="banner_text">Unleash Your Inner Beauty with Our Premium Products</p>
-                                <div class="read_bt"><a href="#">Buy Now</a></div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="banner_img"><img src="~/newfolder/images/banner-img.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h1 class="banner_taital">Beauty <br>Kit</h1>
-                                
-                                <div class="read_bt"><a href="#">Buy Now</a></div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="banner_img"><img src="~/newfolder/images/banner-img.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h1 class="banner_taital">Beauty <br>Kit</h1>
-                            
-                                <div class="read_bt"><a href="#">Buy Now</a></div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="banner_img"><img src="~/newfolder/images/banner-img.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h1 class="banner_taital">Beauty <br>Kit</h1>
-                                <p class="banner_text">Ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                <div class="read_bt"><a href="#">Buy Now</a></div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="banner_img"><img src="~/newfolder/images/banner-img.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- banner section end -->
-    <!-- product section start -->
-    <div class="product_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="product_taital">Our Products</h1>
-                    <p class="product_text">
-                        "Discover your ultimate beauty essentials with BeautyKit – where quality meets elegance."
-                    </p>
-                </div>
-            </div>
-            <div class="product_section_2 layout_padding">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Beauty Bursh</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-1.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Foundation Brush</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-2.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Mascaras</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-3.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Makeup Organizers</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-4.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Essential Oils</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-5.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Lipsticks</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-6.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Loose Powders</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-7.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Compacts</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-8.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">BLush Ons</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-9.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Serums</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-10.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Classic Lipstick Deals</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-11.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product_box">
-                            <h4 class="bursh_text">Eyeliners</h4>
-                            <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                            <img src="~/newfolder/images/img-12.png" class="image_1">
-                            <div class="btn_main">
-                                <div class="buy_bt">
-                                    <ul>
-                                        <li class="active"><a href="#">Buy Now</a></li>
-                                        <li><a href="#">Buy Now</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="price_text">Price $30</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="seemore_bt"><a href="#">See More</a></div>
-            </div>
-        </div>
-    </div>
-    <!-- product section end -->
-    <!-- about section start -->
-    <div class="about_section layout_padding">
-        <div class="container">
-            <div class="about_section_main">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="about_taital_main">
-                            <h1 class="about_taital">About Our beauty store</h1>
-                            <p class="about_text">"Welcome to BeautyKit – your destination for premium beauty products that enhance your natural beauty and confidence. Explore our curated selection of skincare, makeup, and self-care essentials designed to make you look and feel your best every day.</p>
-                            <div class="readmore_bt"><a href="#">Read More</a></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div><img src="~/NewFolder/images/about-img.png" class="image_3"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- about section end -->
-    <!-- customer section start -->
-    <div class="customer_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="customer_taital">What says customers</h1>
-                </div>
-            </div>
-            <div id="main_slider" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="client_section_2">
-                            <div class="client_main">
-                                <div class="client_left">
-                                    <div class="client_img"><img src="~/NewFolder/images/client-img.png"></div>
-                                </div>
-                                <div class="client_right">
-                                    <h3 class="name_text">Emma K.</h3>
-                                    <p class="dolor_text">"BeautyKit has completely transformed my skincare routine. Their products are gentle yet effective, and my skin has never looked better!" </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client_section_2">
-                            <div class="client_main">
-                                <div class="client_left">
-                                    <div class="client_img"><img src="~/NewFolder/images/client-img.png"></div>
-                                </div>
-                                <div class="client_right">
-                                    <h3 class="name_text">Jonyro</h3>
-                                    <p class="dolor_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  eu </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client_section_2">
-                            <div class="client_main">
-                                <div class="client_left">
-                                    <div class="client_img"><img src="images/client-img.png"></div>
-                                </div>
-                                <div class="client_right">
-                                    <h3 class="name_text">Jonyro</h3>
-                                    <p class="dolor_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  eu </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- customer section end -->
-    <!-- contact section start -->
-    <div class="contact_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="contact_taital">Get In Touch</h1>
-                    <p class="contact_text">We'd love to hear from you! Whether you have questions about our products, need assistance with your order, or just want to share your beauty journey, our team is here to help. </p>
-                </div>
-                <div class="col-md-6">
-                    <div class="contact_main">
-                        <div class="contact_bt"><a href="#">Contact Form</a></div>
-                        <div class="newletter_bt"><a href="#">Newletter</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="map_main">
-            <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- contact section end -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
 
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+</html>
+
+
+   
+    
     
 
     <div class="container">
@@ -489,7 +130,7 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : Loram Ipusm</span>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : XyZparis</span>
                                     </a>
                                 </li>
                                 <li>
@@ -499,7 +140,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : demo@gmail.com</span>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : beautiflie@gmail.com</span>
                                     </a>
                                 </li>
                             </ul>
@@ -559,5 +200,7 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
-</body>
+
+   
+
 </html>
